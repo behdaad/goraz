@@ -1,0 +1,85 @@
+body
+{
+	background-image: url(../img/bg.png);
+	color: white;
+	font-family: "Helvetica Neue", Helvetica, Geneva, sans-serif;
+    font-size: 20px;
+}
+
+#container
+{       
+	position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 100px;
+    margin: auto;
+    width: 340px;
+    min-height: 265px;
+
+    padding: 23px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid #333;
+    border-radius: 10px;
+}
+
+label.box
+{
+	display: inline-block;
+	width: 40px;
+	text-align: right;
+}
+
+a
+{
+	color: #bbb;
+	position: relative;
+	bottom: 0px;
+}
+
+input
+{
+	width: 200px;
+	height: 1.6em;
+}
+
+button
+{
+	width: 150px;
+	height: 35px;
+	border-width: 1px;
+	margin-right: 10px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-size: 16px;
+}
+
+.people
+{
+	list-style-type: persian;
+}
+
+.icon
+{
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: 7px;
+}
+
+footer
+{
+	font-size: 0.8em;
+	left: 20px;
+	/*right: 0px;*/
+	position: absolute;
+	bottom: 0px;
+	margin-bottom: 20px;
+	/*text-align: center;*/
+	color: #bbb;
+}
+
+#wrongPassword
+{
+	text-align: center;
+	color: #f33;
+}
