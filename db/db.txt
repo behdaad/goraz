@@ -1,30 +1,30 @@
-person0 password0
-person1 password1
-person2 password2
-person3 password3
-person4 password4
-person5 password5
-person6 password6
-person7 password7
-person8 password8
-person9 password9
-person10 password10
-person11 password11
-person12 password12
-person13 password13
-person14 password14
-person15 password15
-person16 password16
-person17 password17
-person18 password18
-person19 password19
-person20 password20
-person21 password21
-person22 password22
-person23 password23
-person24 password24
-person25 password25
-person26 password26
-person27 password27
-person28 password28
-person29 password29
+1 person1 password1 firstName1 lastName1 yes
+2 person2 password2 firstName2 lastName2 no
+3 person3 password3 firstName3 lastName3 yes
+4 person4 password4 firstName4 lastName4 no
+5 person5 password5 firstName5 lastName5 yes
+6 person6 password6 firstName6 lastName6 no
+7 person7 password7 firstName7 lastName7 yes
+8 person8 password8 firstName8 lastName8 no
+9 person9 password9 firstName9 lastName9 yes
+10 person10 password10 firstName10 lastName10 no
+11 person11 password11 firstName11 lastName11 yes
+12 person12 password12 firstName12 lastName12 no
+13 person13 password13 firstName13 lastName13 yes
+14 person14 password14 firstName14 lastName14 no
+15 person15 password15 firstName15 lastName15 yes
+16 person16 password16 firstName16 lastName16 no
+17 person17 password17 firstName17 lastName17 yes
+18 person18 password18 firstName18 lastName18 no
+19 person19 password19 firstName19 lastName19 yes
+20 person20 password20 firstName20 lastName20 no
+21 person21 password21 firstName21 lastName21 yes
+22 person22 password22 firstName22 lastName22 no
+23 person23 password23 firstName23 lastName23 yes
+24 person24 password24 firstName24 lastName24 no
+25 person25 password25 firstName25 lastName25 yes
+26 person26 password26 firstName26 lastName26 no
+27 person27 password27 firstName27 lastName27 yes
+28 person28 password28 firstName28 lastName28 no
+29 person29 password29 firstName29 lastName29 yes
+30 person30 password30 firstName30 lastName30 no

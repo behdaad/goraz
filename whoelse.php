@@ -33,7 +33,10 @@
 				while (!feof($db))
 				{
 					$line = fgets($db);
-					if ($line == $combined)
+					array $dbLine = explode(" ", $line);
+					$credTest = $dbLine[1] . $dbLine[2];
+					echo $credTest;
+					if ($credTest == $combined)
 						$isValid = true;
 				}
 
@@ -41,19 +44,11 @@
 				{
 					if ($isComing)
 					{
-						$isComingFile = fopen("db/isComing.txt", "a");
-						fwrite($isComingFile, $username . "\n");
-						fclose($isComingFile);
-						// check if previously answered
-						// check if not full
+						
 					}
 					else
 					{
-						$notComingFile = fopen("db/notComing.txt", "a");
-						fwrite($notComingFile, $username . "\n");
-						fclose($notComingFile);
-						// check if previously answered
-						// check if not full
+						
 					}
 				}
 				elseif (!$emptyForm)
