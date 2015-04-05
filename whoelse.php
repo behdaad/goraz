@@ -16,18 +16,18 @@
 				$emptyForm = true;
 				$isComing = false;
 				if ($_POST["isComing"] == "true")
-				{
 					$isComing = true;
-					$emptyForm = false;
-				}
+
 				elseif ($_POST["isComing"] == "false")
-				{
 					$isComing = false;
+
+				if ($username == "" || $password == "")
+					$emptyForm = true;
+				else
 					$emptyForm = false;
-				}
 
 				$combined = $username . " " . $password . "\n";
-				// echo $combined;
+				// echo "comb: " . $combined;
 
 				// check validity
 				$db = fopen("db/db.txt", "r") or die("Unable to open file.");
@@ -38,16 +38,16 @@
 					$line = fgets($db);
 					$dbLine = explode(" ", $line);
 					$credTest = $dbLine[1] . " " . $dbLine[2] . "\n";
-
+					// echo "test: " . $credTest;
 					if ($credTest == $combined)
 					{
 						$isValid = true;
 						$number = intval($dbLine[0]);
-						// echo $number;
+						//echo $number;
 					}
 				}
 
-				if ($isValid)
+				if ($isValid && !$emptyForm)
 				{
 					if ($isComing)
 					{
@@ -56,13 +56,13 @@
 						$wantedLine_arr = explode(" ", $contents_arr[$number]);
 						if ($wantedLine_arr[5] == "yes") // already said is coming
 						{
-							echo "<span id=\"danger\">";
+							echo "<span id=\"red\">";
 							echo "چند بار می‌گی داداچ؟";
 							echo "</span>";
 						}
 						elseif (numberOfComing() >= 15)
 						{
-							echo "<span id=\"danger\">";
+							echo "<span id=\"red\">";
 							echo "شرمنده داداچ، پر شده.";
 							echo "</span>";
 						}
@@ -71,17 +71,20 @@
 							$wantedLine = $wantedLine_arr[0] . " " . $wantedLine_arr[1] . " " . $wantedLine_arr[2] . " " . $wantedLine_arr[3] . " " . $wantedLine_arr[4] . " " . "yes";
 							$contents_arr[$number] = $wantedLine;
 							file_put_contents('db/db.txt', implode("\n", $contents_arr));
-							$numberOfComing++;
+
+							echo "<span id=\"green\">";
+							echo "تلباس تویی، کعبه و بت‌خانه بهانه...";
+							echo "</span>";
 						}
 					}
-					else
+					elseif (!$isComing)
 					{
 						$contents = file_get_contents('db/db.txt');
 						$contents_arr = explode("\n", $contents);
 						$wantedLine_arr = explode(" ", $contents_arr[$number]);
-						if ($wantedLine_arr[5] == "no")
+						if ($wantedLine_arr[5] == "no" && !$emptyForm)
 						{
-							echo "<span id=\"danger\">";
+							echo "<span id=\"red\">";
 							echo "اصلاً مگه قرار بود بیای؟ :|";
 							echo "</span>";
 						}
@@ -90,12 +93,16 @@
 							$wantedLine = $wantedLine_arr[0] . " " . $wantedLine_arr[1] . " " . $wantedLine_arr[2] . " " . $wantedLine_arr[3] . " " . $wantedLine_arr[4] . " " . "no";
 							$contents_arr[$number] = $wantedLine;
 							file_put_contents('db/db.txt', implode("\n", $contents_arr));
+
+							echo "<span id=\"red\">";
+							echo "می‌اومدی حالا :(";
+							echo "</span>";
 						}
 					}
 				}
 				elseif (!$emptyForm)
 				{
-					echo "<span id=\"danger\">";
+					echo "<span id=\"red\">";
 					echo "اشتبا زدی داداچ.";
 					echo "</span>";
 				}
@@ -178,7 +185,7 @@
 			</p>
 		</div>
 		<footer>
-			۲۰۱۵ &copy; بهداد
+			۲۰۱۵ &copy; <a href="admin.php" id="admin">بهداد</a>
 		</footer>
 	</body>
 </html>
