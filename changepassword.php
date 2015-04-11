@@ -5,20 +5,20 @@
 		<title>پسووردتو می‌خوای عوض کنی؟</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
-	<body>
+	<body id="changePassword">
 		<div id="container">
 			<?php
 				$username = $_POST["username"];
 				$oldPassword = $_POST["oldPassword"];
-				$newPassword1 = $_POST["newPassword1"];
-				$newPassword2 = $_POST["newPassword2"];
+				$newPassword1 = str_replace(",", "", $_POST["newPassword1"]);
+				$newPassword2 = str_replace(",", "", $_POST["newPassword2"]);
 				$filledForm = false;
 				if ($_POST["filledForm"] == "true")
 				{
 					$filledForm = true;
 				}
 
-				$combined = $username . " " . $oldPassword . "\n";
+				$combined = $username . "," . $oldPassword . "\n";
 
 				$error = false;
 				if ($username == "" && $oldPassword == "" && $newPassword1 == "" && $newPassword2 == "" && $filledForm) // empty form
@@ -52,8 +52,8 @@
 					while (!feof($db))
 					{
 						$line = fgets($db);
-						$dbLine = explode(" ", $line);
-						$credTest = $dbLine[1] . " " . $dbLine[2] . "\n";
+						$dbLine = explode(",", $line);
+						$credTest = $dbLine[1] . "," . $dbLine[2] . "\n";
 						// echo "cred: " . $credTest . "<br />";
 						if ($credTest == $combined)
 						{
@@ -66,8 +66,8 @@
 					{
 						$contents = file_get_contents('db/db.txt');
 						$contents_arr = explode("\n", $contents);
-						$wantedLine_arr = explode(" ", $contents_arr[$number]);
-						$wantedLine = $wantedLine_arr[0] . " " . $wantedLine_arr[1] . " " . $newPassword1 . " " . $wantedLine_arr[3] . " " . $wantedLine_arr[4] . " " . $wantedLine_arr[5];
+						$wantedLine_arr = explode(",", $contents_arr[$number]);
+						$wantedLine = $wantedLine_arr[0] . "," . $wantedLine_arr[1] . "," . $newPassword1 . "," . $wantedLine_arr[3] . "," . $wantedLine_arr[4] . "," . $wantedLine_arr[5];
 						$contents_arr[$number] = $wantedLine;
 						file_put_contents('db/db.txt', implode("\n", $contents_arr));
 
@@ -83,6 +83,9 @@
 					}
 				}
 			?>
+			<p>
+				پسوورد نباید توش ویرگول داشته باشه ها. ویرگول‌ها حذف می‌شن از پسوورد.
+			</p>
 			<form name="changepassword" action="changepassword.php" method="post">
 				<label for="username" class="box">
 					اسم 
