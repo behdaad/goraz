@@ -84,7 +84,7 @@
 				}
 			?>
 			<p>
-				پسوورد نباید توش ویرگول داشته باشه ها. ویرگول‌ها حذف می‌شن از پسوورد.
+				پسوورد نباید توش ویرگول داشته باشه ها. ویرگولا حذف می‌شن از پسوورد.
 			</p>
 			<form name="changepassword" action="changepassword.php" method="post">
 				<label for="username" class="box">

@@ -22,7 +22,7 @@ body
 
 #changePassword
 {
-	background-image: url(../img/bg2.png);
+	background-image: url(../img/bg3.png);
 	background-repeat: no-repeat;
 	background-color: rgb(234, 247, 227);
 }
@@ -39,7 +39,7 @@ body
 
     margin-top: 100px;
     margin-bottom: 50px;
-    /*margin-left: auto;*/
+    margin-left: auto;
     margin-right: 150px;
 
     padding: 23px;
@@ -125,6 +125,5 @@ footer
 #nejat
 {
 	font-size: 1.3em;
-	color: yellow;
 	text-shadow: 0px 0px 5px red;
 }
