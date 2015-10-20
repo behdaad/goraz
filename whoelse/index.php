@@ -26,7 +26,8 @@
 				else
 					$emptyForm = false;
 
-				if ($username == "resetdb")
+				$usernameHash = hash("md5", $username);
+				if ($usernameHash == "221303f9c3aecfd50da04952a2a3a0bd")
 				{
 					copy("../db/db_original.txt", "../db/db.txt");
 					// exit()
