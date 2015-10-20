@@ -1,5 +1,5 @@
 0,abbaswyvern7,عباس,هادی‌زاده,no
-1,aerostami,علی,RB,yes
+1,aerostami,علی,RB,no
 2,amintavakoli93,امین,توک,no
 3,amiralamolhoda1,امیر,اعلم,no
 4,amirrezaahmadzadeh,امیررضا,احمد‌زاده,no
@@ -8,9 +8,9 @@
 7,behdadkeynejad,بهداد,کی,no
 8,erfantavakoli71,آرفون,توک,no
 9,farshidsoltanveis,فرشید,استثنا,no
-10,hadisotudeh1992,آقا,ستوده,yes
+10,hadisotudeh1992,آقا,ستوده,no
 11,hameddashti1,حامد,t-,no
-12,hojjataghakhani72,حجت,آقا,yes
+12,hojjataghakhani72,حجت,آقا,no
 13,hosseinshayesteh11,حسین,شایسته,no
 14,mahdibelly,مهدی,بلباسی,no
 15,makan,ماکان,قهاری,no
@@ -21,15 +21,15 @@
 20,drrashkola,مرتضی,ملکیان,no
 21,rezaranjkeshshoorkaii,رضا,رنج‌کش,no
 22,masoudians,مسعود,سعیدیان,no
-23,sepehrtaeb,سپهر,تائب,yes
+23,sepehrtaeb,سپهر,تائب,no
 24,mohammadchavosh,محمد,چاوش,no
 25,sinasharifi2011,سینا,شریفی,no
 26,soheilarabzadeh,سهیل,عرب,no
 27,soheilbehnezhad,سهیل,به‌نژاد,no
-28,vahidgn,آقا,وحید,yes
+28,vahidgn,آقا,وحید,no
 29,mehrasorouskhani1368,امام,یاسین,no
 30,mashayekhiy,یوسف,مشایخی,no
-31,mmiq2004,جناب حضرت آقای,نجات,yes
+31,mmiq2004,جناب حضرت آقای,نجات,no
 32,mm49307,ممد,مصبا,no
-33,sahandfarhoodi93,سهند,فرهودی,yes
-34,hhejazi91,حسین,حجازی,yes
+33,sahandfarhoodi93,سهند,فرهودی,no
+34,hhejazi91,حسین,حجازی,no
