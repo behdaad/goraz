@@ -28,7 +28,7 @@ body
 }
 
 #container
-{       
+{
 	/*position: absolute;*/
     /*right: 400px;*/
     /*left: 0px;*/
@@ -51,8 +51,9 @@ body
 label.box
 {
 	display: inline-block;
-	width: 50px;
+	width: 310px;
 	text-align: right;
+	margin-right: 10px;
 }
 
 a
@@ -64,8 +65,10 @@ a
 
 input
 {
-	width: 200px;
-	height: 1.6em;
+	width: 310px;
+	font-size: 1.2em;
+	margin-right: 10px;
+	margin-left: 10px;
 }
 
 button

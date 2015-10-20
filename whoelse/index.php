@@ -5,12 +5,14 @@
 		<title>
 			اینا میان
 		</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="shortcut icon" href="../img/icon/favicon.ico" type="image/x-icon" />
 	</head>
 	<body id="whoElse">
 		<div id="container">
 			<?php
-				$username = $_POST["username"];
+				$usernameInput = $_POST["username"];
+				$username = str_replace(".", "", $usernameInput);
 				$emptyForm = true;
 				$isComing = false;
 				if ($_POST["isComing"] == "true")
@@ -26,13 +28,13 @@
 
 				if ($username == "resetdb")
 				{
-					copy("db_original.txt", "db.txt")
+					copy("../db/db_original.txt", "../db/db.txt");
 					// exit()
 				}
 				else
 				{
 					// check validity
-					$db = fopen("db/db.txt", "r") or die("Unable to open file.");
+					$db = fopen("../db/db.txt", "r") or die("Unable to open file.");
 					$isValid = false;
 					$number = 0;
 					while (!feof($db))
@@ -50,7 +52,7 @@
 					{
 						if ($isComing)
 						{
-							$contents = file_get_contents('db/db.txt');
+							$contents = file_get_contents('../db/db.txt');
 							$contents_arr = explode("\n", $contents);
 							$wantedLine_arr = explode(",", $contents_arr[$number]);
 							if ($wantedLine_arr[4] == "yes") // already said is coming
@@ -69,7 +71,7 @@
 							{
 								$wantedLine = $wantedLine_arr[0] . "," . $wantedLine_arr[1] . "," . $wantedLine_arr[2] . "," . $wantedLine_arr[3] . "," . "yes";
 								$contents_arr[$number] = $wantedLine;
-								file_put_contents('db/db.txt', implode("\n", $contents_arr));
+								file_put_contents('../db/db.txt', implode("\n", $contents_arr));
 
 								echo "<span id=\"green\">";
 								echo "تلباس تویی، کعبه و بت‌خانه بهانه...";
@@ -78,7 +80,7 @@
 						}
 						elseif (!$isComing)
 						{
-							$contents = file_get_contents('db/db.txt');
+							$contents = file_get_contents('../db/db.txt');
 							$contents_arr = explode("\n", $contents);
 							$wantedLine_arr = explode(",", $contents_arr[$number]);
 							if ($wantedLine_arr[4] == "no" && !$emptyForm)
@@ -91,7 +93,7 @@
 							{
 								$wantedLine = $wantedLine_arr[0] . "," . $wantedLine_arr[1] . "," . $wantedLine_arr[2] . "," . $wantedLine_arr[3] . "," . "no";
 								$contents_arr[$number] = $wantedLine;
-								file_put_contents('db/db.txt', implode("\n", $contents_arr));
+								file_put_contents('../db/db.txt', implode("\n", $contents_arr));
 
 								echo "<span id=\"red\">";
 								echo "می‌اومدی حالا :(";
@@ -110,7 +112,7 @@
 				function numberOfComing()
 				{
 					$sum = 0;
-					$fileContents = file_get_contents('db/db.txt');
+					$fileContents = file_get_contents('../db/db.txt');
 					$contents_arr = explode("\n", $fileContents);
 					// $wantedLine_arr = explode(",", $contents_arr[$number]);
 					foreach ($contents_arr as $line)
@@ -128,20 +130,20 @@
 			</p>
 			<ol class="people" id="coming">
 				<?php
-					$file = fopen("db/db.txt", "r");
+					$file = fopen("../db/db.txt", "r");
 					while (!feof($file))
 					{
 						$line = fgets($file);
 						$line_arr = explode(",", $line);
 
-						if ($line_arr[5] == "yes\n")
+						if ($line_arr[4] == "yes\n")
 						{
-							if ($line_arr[1] == "nejat")
+							if ($line_arr[1] == "mmiq2004")
 								echo "<li id=\"nejat\">";
 							else
 								echo "<li>";
-							echo $line_arr[3] . " " . $line_arr[4] . " ";
-							echo "<img src=\"img/yes.png\" class=\"icon\" />";
+							echo $line_arr[2] . " " . $line_arr[3] . " ";
+							echo "<img src=\"../img/yes.png\" class=\"icon\" />";
 							echo  "</li>\n";
 						}
 					}
@@ -153,19 +155,19 @@
 			</p>
 			<ol class="people" id="notComing">
 				<?php
-					$file = fopen("db/db.txt", "r");
+					$file = fopen("../db/db.txt", "r");
 					while (!feof($file))
 					{
 						$line = fgets($file);
 						$line_arr = explode(",", $line);
-						if ($line_arr[5] == "no\n")
+						if ($line_arr[4] == "no\n")
 						{
 							if ($line_arr[1] == "nejat")
 								echo "<li id=\"nejat\">";
 							else
 								echo "<li>";
-							echo $line_arr[3] . " " . $line_arr[4] . " ";
-							echo "<img src=\"img/no.png\" class=\"icon\" />";
+							echo $line_arr[2] . " " . $line_arr[3] . " ";
+							echo "<img src=\"../img/no.png\" class=\"icon\" />";
 							echo  "</li>\n";
 						}
 					}
@@ -185,13 +187,13 @@
 				?>
 			</ol-->
 			<p>
-				<a href="index.html">
+				<a href="..">
 					همون صفحه قبلیه
 				</a>
 			</p>
 		</div>
 		<footer>
-			۲۰۱۵ &copy; <a href="admin.php" id="admin">بهداد</a>
+			۲۰۱۵ &copy; بهداد
 		</footer>
 	</body>
 </html>

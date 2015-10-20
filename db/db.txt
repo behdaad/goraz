@@ -1,11 +1,11 @@
 0,abbaswyvern7,عباس,هادی‌زاده,no
 1,aerostami,علی,RB,yes
 2,amintavakoli93,امین,توک,no
-3,amiralamolhoda1,امیر,اعلم,no
+3,amiralamolhoda1,امیر,اعلم,yes
 4,amirrezaahmadzadeh,امیررضا,احمد‌زاده,no
 5,arianniaki,آرین,نیاک,no
 6,bbkghadiri6,بابک,قدیری,no
-7,behdadkeynejad,بهداد,کی,no
+7,behdadkeynejad,بهداد,کی,yes
 8,erfantavakoli71,آرفون,توک,no
 9,farshidsoltanveis,فرشید,استثنا,no
 10,hadisotudeh1992,آقا,ستوده,yes
@@ -13,7 +13,7 @@
 12,hojjataghakhani72,حجت,آقا,yes
 13,hosseinshayesteh11,حسین,شایسته,no
 14,mahdibelly,مهدی,بلباسی,no
-15,makan,ماکان,قهاری,no
+15,mrghahari72,ماکان,قهاری,no
 16,merlion380,میلاد,عسگری,no
 17,mohammadmotiei,محمد,مطی,no
 18,razeghi71,محمد,رازقی,no
@@ -25,7 +25,7 @@
 24,mohammadchavosh,محمد,چاوش,no
 25,sinasharifi2011,سینا,شریفی,no
 26,soheilarabzadeh,سهیل,عرب,no
-27,soheilbehnezhad,سهیل,به‌نژاد,no
+27,soheilbehnezhad,سهیل,به‌نژاد,yes
 28,vahidgn,آقا,وحید,yes
 29,mehrasorouskhani1368,امام,یاسین,no
 30,mashayekhiy,یوسف,مشایخی,no
